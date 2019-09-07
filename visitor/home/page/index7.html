@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <!--    <script src="//js.apiunit.com/include-html.js"></script>-->
+    <script src="//js.apiunit.com/include-script.js"></script>
+    <!--    <script src="//js.apiunit.com/e.js"></script>-->
+    <!--    <script src="//js.apiunit.com/message.js"></script>-->
+
+    <!--    <script src="//js.apiunit.com/include-url.js"></script>-->
+
+    <script src="//js.apiunit.com/formToObject.min.js"></script>
+    <script src="//js.apiunit.com/response.js"></script>
+    <script src="//js.apiunit.com/rest.js"></script>
+    <!--    <script src="//js.apiunit.com/rest-url.js"></script>-->
+    <!--    <script src="//js.apiunit.com/rest-module.js"></script>-->
+    <!--    <script src="//js.apiunit.com/rest-submit.js"></script>-->
+
+    <!--    <script src="//js.apiunit.com/rest-form.js"></script>-->
+    <script src="//js.apiunit.com/include.js"></script>
+    <script src="//js.apiunit.com/listener.js"></script>
+    <script src="//js.apiunit.com/router.js"></script>
+    <script src="//js.apiunit.com/apiunit.js"></script>
+
+    <script>
+        // REDIRECTION from http -> https
+        var dev = window.location.hostname === 'localhost';
+        var https = window.location.protocol === 'https:';
+        console.log(dev, https, window.location.protocol, window.location);
+        if (!dev && !https) {
+            window.location.href = window.location.href.replace('http', 'https');
+        }
+    </script>
+
+</head>
+<body>
+
+http://localhost/origini-app/visitor/home/page/index.html
+<!--<div class="home-messages">-->
+
+<!--</div>-->
+
+
+<div id="home-plugins">
+    ...
+
+</div>
+
+
+<script>
+
+    var success = function (data) {
+        console.log('loaded', data);
+    };
+
+    includeScript("//js.apiunit.com/e.js", document.body, success);
+    includeScript("//js.apiunit.com/formToObject.min.js", document.body, success);
+    includeScript("//js.apiunit.com/response.js", document.body, success);
+    includeScript("//js.apiunit.com/rest.js", document.body, success);
+    includeScript("//js.apiunit.com/include.js", document.body, success);
+    includeScript("//js.apiunit.com/listener.js", document.body, success);
+    includeScript("//js.apiunit.com/router.js", document.body, success);
+    includeScript("//js.apiunit.com/apiunit.js", document.body, success);
+    includeScript("//js.apiunit.com/index.js", document.body, success);
+
+    // loadJS('yourcode.js', yourCodeToBeCalled, document.body);
+
+
+</script>
+
+
+</body>
+</html>

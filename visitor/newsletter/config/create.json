@@ -1,0 +1,32 @@
+{
+  "#home-plugins": {
+    "docs": {
+      "version": "0.0.1",
+      "author": "Tom Sapletta",
+      "company": "Softreck",
+      "name": "Newsletter",
+      "tags": "Newsletter Create, Read, Update, Delete"
+    },
+    "image": [
+      "/visitor/home/img/apiunit.png"
+    ],
+    "html": [
+      "/visitor/home/plugin/messages.html",
+      "/visitor/newsletter/plugin/create.html"
+    ],
+    "style": [
+      "/visitor/newsletter/css/black.css",
+      "/visitor/home/css/mobile.css"
+    ],
+    "script": [
+      "//js.apiunit.com/formToObject.min.js",
+      "//js.apiunit.com/message.js",
+      "//js.apiunit.com/rest.js",
+      "//js.apiunit.com/form-event.js",
+      "//js.apiunit.com/rest-url.js"
+    ],
+    "script-delay": [
+      "/visitor/newsletter/js/foot.js"
+    ]
+  }
+}
