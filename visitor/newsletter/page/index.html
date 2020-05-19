@@ -85,10 +85,15 @@
     var url = 'https://php.jloads.com/index.php';
 
     var Newsletter = new Rest(url, '?', function (data) {
-        console.error(data);
-    }, function (data) {
-        console.table(data);
-    });
+            // event.preventDefault();
+            console.log(data);
+        },
+        function (data) {
+            console.error(data);
+        }, function (data) {
+            console.table(data);
+        }
+    );
 
 
     var forms = document.getElementsByTagName('form');
