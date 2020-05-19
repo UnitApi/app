@@ -81,8 +81,12 @@
 <script>
     // document.getElementsByTagName('form[action=""]').value = 'https://php.jloads.com/index.php';
     var url = 'https://php.jloads.com/index.php';
-
-    var Newsletter = new Rest(url, '?', function (data) {
+    var response = function (xhr, error, success) {
+        // event.preventDefault();
+        console.log(data);
+        success();
+    }
+    var Newsletter = new Rest(url, '?', response, function (data) {
         console.error(data);
     }, function (data) {
         console.table(data);
