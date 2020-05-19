@@ -80,6 +80,12 @@ http://localhost/origini-app/visitor/home/page/index.html
         "rest/rest-form.js"
     ]);
 
+    loader
+        .cacheOff()
+        .domain("//app.jloads.com/visitor/home/js/")
+        .js([
+            "form.js"
+        ]);
     loader.style([
         "//app.jloads.com/visitor/newsletter/css/black.css",
         "//app.jloads.com/visitor/home/css/mobile.css"
@@ -96,21 +102,6 @@ http://localhost/origini-app/visitor/home/page/index.html
     ]);
 
 
-    setTimeout(function () {
-            var form = new RestForm('form', error, success);
-
-            console.log('RestForm');
-            return;
-
-
-            form.submit({
-                "target": "form",
-                "url": "//app.jloads.com/visitor/newsletter/php/index.php",
-                "method": "get"
-            });
-        },
-        400
-    );
 
     // console.log(
     //     load(target, success, error)
