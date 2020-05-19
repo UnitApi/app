@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
-    <script src="//js.apiunit.com/load.js"></script>
+    <script src="//load.apiunit.com/load.js"></script>
 
     <script>
         // REDIRECTION from http -> https
@@ -18,21 +18,19 @@
 
 
     <script>
-
-        // TODO: move all scripts to js.apiunit.com
-
+        // Configuration
         var success = function (data) {
             console.log('loaded', data);
         };
         var error = function (data) {
             console.error('!loaded', data);
         };
+        var jloads = new Load(document.body, success, error);
 
-        // var target = document.body;
-        var target = document.getElementsByTagName('head')[0];
+    </script>
 
-        // var Load = new load(target, success);
-        load(target, success, error).js([
+    <script>
+        jloads.cacheOff().js([
             "//js.apiunit.com/e.js",
             "//js.apiunit.com/formToObject.min.js",
             "//js.apiunit.com/response.js",
@@ -43,7 +41,7 @@
             "//js.apiunit.com/apiunit.js",
         ]);
 
-        load(target, success, error).delay(100).js([
+        jloads.cacheOff().delay(100).js([
             "//js.apiunit.com/index.js",
             "//js.apiunit.com/index1.js"
         ]);
@@ -53,7 +51,10 @@
 </head>
 <body>
 
+https://app.jloads.com/visitor/home/page/index.html
+
 http://localhost/origini-app/visitor/home/page/index.html
+
 <!--<div class="home-messages">-->
 
 <!--</div>-->
@@ -63,8 +64,6 @@ http://localhost/origini-app/visitor/home/page/index.html
     ...
 
 </div>
-
-
 
 
 </body>
