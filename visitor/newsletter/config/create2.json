@@ -23,8 +23,8 @@
   "script": [
     "//js.jloads.com/formToObject.min.js",
     "//js.jloads.com/message.js",
-    "//js.jloads.com/rest.js",
-    "//js.jloads.com/form-event.js",
+    "//js.jloads.com/rest/rest.js",
+    "//js.jloads.com/rest/form-event.js",
     "//js.jloads.com/rest-url.js"
   ],
   "script-delay": [

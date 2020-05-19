@@ -1,5 +1,9 @@
 setTimeout(function () {
-        var form = new RestForm('form', error, success);
+        var response = function () {
+            alert("OK RESPONSE");
+        }
+
+        var form = new RestForm('form', response, error, success);
 
         form.submit({
             "target": "form",

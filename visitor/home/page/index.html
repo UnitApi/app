@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>app.jloads.com</title>
+    <title>Home app.jloads.com</title>
 
     <script src="//load.jloads.com/load.js"></script>
 
@@ -17,14 +17,12 @@
         }
     </script>
 
-
 </head>
 <body>
 
-http://localhost/origini-app/visitor/home/page/index.html
-<!--<div class="home-messages">-->
-
-<!--</div>-->
+<div class="home-messages">
+..
+</div>
 
 
 <div id="home-plugins">
@@ -44,11 +42,6 @@ http://localhost/origini-app/visitor/home/page/index.html
         console.error('!loaded', data);
     };
 
-    // var target = document.body;
-    var target = document.getElementsByTagName('head')[0];
-
-    // var Load = new load(target, success);
-    // var Load = new load(target, success);
     var loader = new Load(document.body, success, error);
     // console.log(
     //     'loada',loada
@@ -71,7 +64,7 @@ http://localhost/origini-app/visitor/home/page/index.html
         "e.js",
         "formToObject.min.js",
         "response.js",
-        "rest.js",
+        "rest/rest.js",
         "include/include.js",
         "listener.js",
         "router.js",
