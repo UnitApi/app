@@ -2,34 +2,35 @@
 <head>
     <title>Hier erfolgt in 0 Sekunden eine Weiterleitung</title>
     <!-- weitere Angaben im Header, z.B. Metatags -->
-        <meta http-equiv="refresh" content="0; URL=https://app.jloads.com/visitor/home/page/index.html">
+<!--        <meta http-equiv="refresh" content="0; URL=https://app.jloads.com/visitor/home/page/index.html">-->
     <!-- weitere Angaben im Header wie CSS und JavaScript -->
 </head>
 
 <script>
     // REDIRECTION from http -> https
-    // var domain = 'app.origini.pl';
-    // var port = '';
-    // var protocol = "https://";
-    // var redirect = "/visitor/home/page/index.html";
+    var domain = 'app.jloads.com';
+    var port = '';
+    var protocol = "https://";
+    var redirect = "/visitor/home/page/index.html";
     //
-    // var dev = window.location.hostname === 'localhost';
-    // var https = window.location.protocol === 'https:';
+    var dev = window.location.hostname === 'localhost';
+    var https = window.location.protocol === 'https:';
     // console.log(dev, https, window.location.protocol, window.location);
     //
-    // if (!dev && !https) {
-    //     //window.location.href = window.location.href.replace('http', 'https');
-    // }
+    if (!dev && !https) {
+        // window.location.href = window.location.href.replace('http', 'https');
+        protocol = "http://";
+    }
     //
-    // if (dev) {
+    if (dev) {
     //     //window.location.href = window.location.href.replace('app.origini.pl', 'localhost');
-    //     domain = 'localhost';
-    //     protocol = "http://";
-    //     port = ":3000";
-    // }
+        domain = 'localhost';
+        protocol = "http://";
+        port = ":3000";
+    }
     //
     //
-    // window.location = protocol + domain + port + redirect;
+    window.location = protocol + domain + port + redirect;
 
 </script>
 
