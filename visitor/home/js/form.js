@@ -11,10 +11,10 @@ setTimeout(function () {
         }
 
         var success = function (data) {
-            console.log('loaded', data);
+            console.log('FORM success', data);
         };
         var error = function (data) {
-            console.error('!loaded', data);
+            console.error('!FORM', data);
         }
 
         var form = new RestForm('form', response, error, success);
