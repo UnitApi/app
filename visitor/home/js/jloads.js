@@ -1,6 +1,7 @@
 var script = document.createElement('script');
 script.src = (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js";
 document.head.appendChild(script);
+
 script.onload = function () {
 
     var success = function (data) {
@@ -73,6 +74,7 @@ script.onload = function () {
 
 
     var images = new Load(document.body, success, error);
+    // var images = new Load(document.body, success, error, loader);
 
 
     images.target("#home-images").img([

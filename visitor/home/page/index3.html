@@ -1,13 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Home app.jloads.com</title>
 
-    <script src="../js/jloads.js" type="text/javascript"></script>
+    <!--        <script src="//load.jloads.com/load.js"></script>-->
+    <!--    <script src="//localhost:8080/load.js?1"></script>-->
+
+
+
+    <script type="text/javascript">
+        // var script = document.createElement('script');
+        // script.src = (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js";
+        // document.head.appendChild(script);
+    </script>
+
+
+    <script src="../js/jloads.js" type="text/javascript" async></script>
+
 
 </head>
-<body>
+<body >
+
+
+
+<!--<script src="//load.jloads.com/load.js" type="text/javascript">-->
+<!--    // document.head.getElementsByTagName('script')[0].setAttribute('src', '//localhost:8080/load.js');-->
+<!--</script>-->
+
+<script type="text/javascript">
+    // <script src="" type="text/javascript" onload="this.setAttribute('src', '//localhost:8080/load.js')">
+    //document.head.getElementsByTagName("script")[0].setAttribute('src', '//localhost:8080/load.js');
+    // var script = document.createElement('script');
+    // document.createElement('script') src = '//localhost:8080/load.js';
+    // script.src = '//localhost:8080/load.js';
+    // script.src = '//load.jloads.com/load.js';
+    // script.src = (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js";
+    // document.head.appendChild(script);
+    // document.getElementsByTagName('script')[0].setAttribute('src', '//localhost:8080/load.js');
+</script>
+
+<li onClick="alert(this.tagName)">123</li>
+
+<script>
+    // var dev = window.location.hostname === 'localhost';
+
+    // var time = new Date().getTime();
+    // var file = "load.js";
+
+    // document.head.appendChild(
+    //     document.createElement('script').setAttribute('src', "//localhost:8080/load.js"
+    //         // (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js"
+    //     )
+    // );
+
+</script>
+
+
+<script>
+    // var dev = window.location.hostname === 'localhost';
+    // var time = new Date().getTime();
+    //
+    // var domain = "//load.jloads.com/";
+    //
+    // if (dev) {
+    //     domain = '//localhost:8080/';
+    // }
+    // var url = domain + 'load.js' + '?' + time;
+    //
+    // var url_jloads = '../js/jloads.js' + '?' + time;
+    //
+    // var js = document.createElement('script');
+    // js.setAttribute('src', url);
+    // document.head.appendChild(js);
+    //
+    // var js = document.createElement('script');
+    // js.setAttribute('src', url_jloads);
+    // document.head.appendChild(js);
+
+
+
+    // time();
+    // REDIRECTION from http -> https
+    // var https = window.location.protocol === 'https:';
+    // console.log(dev, https, window.location.protocol, window.location);
+    // if (!dev && !https) {
+    //     window.location.href = window.location.href.replace('http', 'https');
+    // }
+</script>
+
 
 <div class="home-messages">
     ..
@@ -23,6 +105,132 @@
     ...
 
 </div>
+
+
+<script>
+
+    // TODO: move all scripts to js.jloads.com
+
+
+
+    // console.log(
+    //     load(target, success, error)
+    // );
+    //
+    // jloads.delay(100).cache(1).js([
+    //     "//js.jloads.com/index.js",
+    //     "//js.jloads.com/index1.js"
+    // ]);
+
+    //
+    // load(target, success, error).style([
+    //     "/visitor/newsletter/css/black.css",
+    //     "/visitor/home/css/mobile.css"
+    // ]);
+    //
+    //
+    // var target = document.body;
+    //
+    // load(target, success, error).html([
+    //     "/visitor/home/plugin/messages.html",
+    //     "/visitor/newsletter/plugin/create.html"
+    // ]);
+    //
+    //
+    // load(target, success, error).image([
+    //     "/visitor/home/img/jloads.png"
+    // ]);
+
+
+    // event('submit');
+
+    // TODO: more possbilites, recognise extension
+    // function myPlugin() {
+    //
+    //     var opts = {
+    //         verbose: false
+    //     };                          ///< The options required to run this function
+    //     var self = this;            ///< An alias to 'this' in case we're in jQuery                         ///< Constants required for this function to work
+    //
+    //     this.getOptions = function() {
+    //         return opts;
+    //     };
+    //
+    //     this.setOptions = function(options) {
+    //         for (var x in options) {
+    //             opts[x] = options[x];
+    //         }
+    //     };
+    //
+    //     /**
+    //      * @brief Load the required files for this plugin
+    //      * @param {Function} callback A callback function to run when all files have been loaded
+    //      */
+    //     this.loadRequiredFiles = function (callback) {
+    //         var scripts = ['xx.js', 'yy.js'];
+    //         var styles = ['zz.css'];
+    //         var filesloaded = 0;
+    //         var filestoload = scripts.length + styles.length;
+    //         for (var i = 0; i < scripts.length; i++) {
+    //             log('Loading script ' + scripts[i]);
+    //             var script = document.createElement('script');
+    //             script.type = 'text/javascript';
+    //             script.src = scripts[i];
+    //             script.onload = function () {
+    //                 log('Loaded script');
+    //                 log(this);
+    //                 filesloaded++;
+    //                 finishLoad();
+    //             };
+    //             document.head.appendChild(script);
+    //         }
+    //         for (var i = 0; i < styles.length; i++) {
+    //             log('Loading style ' + styles[i]);
+    //             var style = document.createElement('link');
+    //             style.rel = 'stylesheet';
+    //             style.href = styles[i];
+    //             style.type = 'text/css';
+    //             style.onload = function () {
+    //                 log('Loaded style');
+    //                 log(this);
+    //                 filesloaded++;
+    //                 finishLoad();
+    //             };
+    //             document.head.appendChild(style);
+    //         }
+    //         function finishLoad() {
+    //             if (filesloaded === filestoload) {
+    //                 callback();
+    //             }
+    //         }
+    //     };
+    //
+    //     /**
+    //      * @brief Enable user-controlled logging within this function
+    //      * @param {String} msg The message to log
+    //      * @param {Boolean} force True to log message even if user has set logging to false
+    //      */
+    //     function log(msg, force) {
+    //         if (opts.verbose || force) {
+    //             console.log(msg);
+    //         }
+    //     }
+    //
+    //     /**
+    //      * @brief Initialise this function
+    //      */
+    //     this.init = function() {
+    //         self.loadRequiredFiles(self.afterLoadRequiredFiles);
+    //     };
+    //
+    //     this.afterLoadRequiredFiles = function () {
+    //         // Do stuff
+    //     };
+    //
+    // }
+
+</script>
+
 
 </body>
 </html>
