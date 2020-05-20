@@ -7,42 +7,86 @@
     <!--        <script src="//load.jloads.com/load.js"></script>-->
     <!--    <script src="//localhost:8080/load.js?1"></script>-->
 
-    <script src=""></script>
+
+
+    <script type="text/javascript">
+        // var script = document.createElement('script');
+        // script.src = (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js";
+        // document.head.appendChild(script);
+    </script>
+
+
+    <script src="../js/jloads.js" type="text/javascript" async></script>
 
 
 </head>
-<body>
+<body >
+
+
+
+<!--<script src="//load.jloads.com/load.js" type="text/javascript">-->
+<!--    // document.head.getElementsByTagName('script')[0].setAttribute('src', '//localhost:8080/load.js');-->
+<!--</script>-->
+
+<script type="text/javascript">
+    // <script src="" type="text/javascript" onload="this.setAttribute('src', '//localhost:8080/load.js')">
+    //document.head.getElementsByTagName("script")[0].setAttribute('src', '//localhost:8080/load.js');
+    // var script = document.createElement('script');
+    // document.createElement('script') src = '//localhost:8080/load.js';
+    // script.src = '//localhost:8080/load.js';
+    // script.src = '//load.jloads.com/load.js';
+    // script.src = (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js";
+    // document.head.appendChild(script);
+    // document.getElementsByTagName('script')[0].setAttribute('src', '//localhost:8080/load.js');
+</script>
+
+<li onClick="alert(this.tagName)">123</li>
+
+<script>
+    // var dev = window.location.hostname === 'localhost';
+
+    // var time = new Date().getTime();
+    // var file = "load.js";
+
+    // document.head.appendChild(
+    //     document.createElement('script').setAttribute('src', "//localhost:8080/load.js"
+    //         // (window.location.hostname === 'localhost') ? "//localhost:8080/load.js" : "//load.jloads.com/load.js"
+    //     )
+    // );
+
+</script>
 
 
 <script>
-    var dev = window.location.hostname === 'localhost';
-    var time = new Date().getTime();
+    // var dev = window.location.hostname === 'localhost';
+    // var time = new Date().getTime();
+    //
+    // var domain = "//load.jloads.com/";
+    //
+    // if (dev) {
+    //     domain = '//localhost:8080/';
+    // }
+    // var url = domain + 'load.js' + '?' + time;
+    //
+    // var url_jloads = '../js/jloads.js' + '?' + time;
+    //
+    // var js = document.createElement('script');
+    // js.setAttribute('src', url);
+    // document.head.appendChild(js);
+    //
+    // var js = document.createElement('script');
+    // js.setAttribute('src', url_jloads);
+    // document.head.appendChild(js);
 
-    var domain = "//load.jloads.com/";
 
-    if (dev) {
-        domain = '//localhost:8080/';
-    }
-    var url = domain + 'load.js' + '?' + time;
-
-    var url_jloads = '../js/jloads.js' + '?' + time;
-
-    var js = document.createElement('script');
-    js.setAttribute('src', url);
-    document.head.appendChild(js);
-
-    var js = document.createElement('script');
-    js.setAttribute('src', url_jloads);
-    document.head.appendChild(js);
 
     // time();
     // REDIRECTION from http -> https
-    var https = window.location.protocol === 'https:';
-
-    console.log(dev, https, window.location.protocol, window.location);
-    if (!dev && !https) {
-        window.location.href = window.location.href.replace('http', 'https');
-    }
+    // var https = window.location.protocol === 'https:';
+    // console.log(dev, https, window.location.protocol, window.location);
+    // if (!dev && !https) {
+    //     window.location.href = window.location.href.replace('http', 'https');
+    // }
 </script>
 
 
@@ -185,6 +229,7 @@
     // }
 
 </script>
+
 
 </body>
 </html>
