@@ -84,10 +84,21 @@
     //var url = 'origini-app/visitor/newsletter/page/index.php';
     var url = 'https://php.jloads.com/index.php';
 
+    // var response = function (xhr, error, success) {
+    //     // event.preventDefault();
+    //     console.log(xhr);
+    //     success();
+    // }
+
     var response = function (xhr, error, success) {
-        // event.preventDefault();
-        console.log(data);
-        success();
+        console.log("xhr", xhr);
+        // console.log("b", b);
+        // console.log("c", c);
+        // alert("OK RESPONSE");
+        AddMessage(xhr.status);
+        AddMessage(xhr.statusText);
+        AddMessage(xhr.response);
+        success(xhr.response);
     }
 
     var Newsletter = new Rest(url, '?', response,
