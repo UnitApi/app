@@ -1,5 +1,8 @@
 setTimeout(function () {
-        var response = function () {
+        var response = function (a,b,c) {
+            console.log("a", a);
+            console.log("b", b);
+            console.log("c", c);
             alert("OK RESPONSE");
         }
 
