@@ -86,15 +86,17 @@
     // document.getElementsByTagName('form[action=""]').value = 'https://php.jloads.com/index.php';
     // TODO full path
     //var url = 'origini-app/visitor/newsletter/page/index.php';
-    var url = 'https://php.jloads.com/index.php';
+    var url = (window.location.hostname === 'localhost') ? "//localhost:8000/index.php" : "//php.jloads.com/index.php";
 
-    // var response = function (xhr, error, success) {
-    //     // event.preventDefault();
-    //     console.log(xhr);
-    //     success();
-    // }
+    var success = function (data) {
+        // console.log('FORM success', data);
+        console.table(data);
+    };
+    var error = function (data) {
+        console.error('!FORM', data);
+    }
 
-    var response = function (xhr, error, success) {
+    var response = function (xhr) {
         console.log("xhr", xhr);
         // console.log("b", b);
         // console.log("c", c);
@@ -102,19 +104,13 @@
         AddMessage(xhr.status);
         AddMessage(xhr.statusText);
         AddMessage(xhr.response);
-        success(xhr.response);
+        // success(xhr.response);
     }
 
-    var Newsletter = new Rest(url, '?', response,
-        function (data) {
-            console.error(data);
-        }, function (data) {
-            console.table(data);
-        }
-    );
-
+    var Newsletter = new Rest(url, '?', response, error, success);
 
     var forms = document.getElementsByTagName('form');
+
     // console.log(forms);
     for (var i = 0; i < forms.length; i++) {
 
