@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Home app.jloads.com</title>
 
-    <script src="//load.jloads.com/load.js"></script>
+    <!--    <script src="//load.jloads.com/load.js"></script>-->
+    <script src="//localhost:8080/load.js?1"></script>
 
     <script>
         // time();
@@ -30,6 +31,11 @@
 
 </div>
 
+<div id="home-images">
+    ...
+
+</div>
+
 
 <script>
 
@@ -43,65 +49,71 @@
     };
 
     var jloads = new Load(document.body, success, error);
+
+    jloads.env("//localhost:80/", "local", function () {
+        return window.location.hostname === 'localhost';
+    })
+
+    jloads.env("//js.jloads.com/", "production", function () {
+        return window.location.hostname !== 'localhost';
+    })
+
     // console.log(
     //     'loada',loada
     // );
 
     // jloads.cache(1).cascade().js([
-    jloads
-        .cacheOff()
-        // .env({
-        //     "local":{
-        //         "domain": "//localhost:80/"
-        //     },
-        //     "production":{
-        //         "domain": "//js.jloads.com/"
-        //     }
-        // })
-        // .domain('//js.jloads.com/')
-        // .domain("//localhost:80/")
-        // .domain("//js.jloads.com/")
-        .env("//localhost:80/", "local",function () {
-            return window.location.hostname === 'localhost';
-        })
-        .env("//js.jloads.com/", "production",function () {
-            return window.location.hostname !== 'localhost';
-        })
-        .js([
-            "load/message.js",
-            "load/e.js",
-            "load/formToObject.min.js",
-            "load/response.js",
-            "rest/rest.js",
+    jloads.cacheOff().js([
+        "load/message.js",
+        "load/e.js",
+        "load/formToObject.min.js",
+        "load/response.js",
+        "rest/rest.js",
 
-            "include/include.js",
+        "include/include.js",
 
-            "load/listener.js",
-            "load/router.js",
-            "rest/rest-form.js"
-        ]);
-
-    var external = new Load(document.body, success, error);
-
-    external
-        .cacheOff()
-        .domain("//app.jloads.com/visitor/home/js/")
-        .js([
-            "form.js"
-        ]);
-
-    external.style([
-        "//app.jloads.com/visitor/newsletter/css/black.css",
-        "//app.jloads.com/visitor/home/css/mobile.css"
-    ]);
-
-    external.delay(10).target("#home-plugins").html([
-        "//app.jloads.com/visitor/home/plugin/messages.html",
-        "//app.jloads.com/visitor/newsletter/plugin/create.html"
+        "load/listener.js",
+        "load/router.js",
+        "rest/rest-form.js"
     ]);
 
 
-    external.delay(70).target("#home-plugins").img([
+    var app = new Load(document.body, success, error);
+    app.env("//localhost:3000/", "local", function () {
+        return window.location.hostname === 'localhost';
+    })
+    app.env("//app.jloads.com/", "production", function () {
+        return window.location.hostname !== 'localhost';
+    })
+    app.cacheOff();
+
+    app.js([
+            "visitor/home/js/form.js"
+        ]);
+
+    app.style([
+        "visitor/newsletter/css/black.css",
+        "visitor/home/css/mobile.css"
+    ]);
+
+    var media = new Load(document.body, success, error);
+    media.env("//localhost:3000/", "local", function () {
+        return window.location.hostname === 'localhost';
+    })
+    media.env("//app.jloads.com/", "production", function () {
+        return window.location.hostname !== 'localhost';
+    })
+    media.delay(10).target("#home-plugins");
+    media.html([
+        "visitor/home/plugin/messages.html",
+        "visitor/newsletter/plugin/create.html"
+    ]);
+
+
+    var images = new Load(document.body, success, error);
+
+
+    images.target("#home-images").img([
         "//app.jloads.com/visitor/home/img/apiunit.png"
     ]);
 
