@@ -4,8 +4,11 @@ frontend app, using js.jloads.com, small html modules, possible to use in extern
 ## ladowane bezposrednio z github
 
 
-## localhost
+## localhost url's
 
+![example1.png](docs/example1.png)
+
+[Home app.jloads.com](http://localhost:3000/visitor/home/page/index.html?method=POST&name=Sa&email=%40&submit=Dodaj+Subskrypcj%C4%99)
 
 [Auth](http://localhost:3000/visitor/auth/page/index.html)
 
