@@ -17,13 +17,17 @@ setTimeout(function () {
             console.error('!FORM', data);
         }
 
-        var form = new RestForm('form', response, error, success);
+        var form = new RestForm('?', 'form', response, error, success);
 
-        form.submit({
+        form.cfg({
             "target": "form",
             "url": "//php.jloads.com/index.php",
             "method": "get"
         });
+
+        form.url((window.location.hostname === 'localhost') ? "//localhost:8000/load.js" : "//php.jloads.com/index.php");
+
+        form.submit();
     },
     400
 );
