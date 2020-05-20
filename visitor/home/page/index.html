@@ -42,56 +42,66 @@
         console.error('!loaded', data);
     };
 
-    var loader = new Load(document.body, success, error);
+    var jloads = new Load(document.body, success, error);
     // console.log(
     //     'loada',loada
     // );
 
-    // loader.cache(1).cascade().js([
-    loader
+    // jloads.cache(1).cascade().js([
+    jloads
         .cacheOff()
         // .env({
         //     "local":{
-        //         "domain": "//localhost:63342/"
+        //         "domain": "//localhost:80/"
         //     },
         //     "production":{
         //         "domain": "//js.jloads.com/"
         //     }
         // })
         // .domain('//js.jloads.com/')
-        .domain("//js.jloads.com/")
+        // .domain("//localhost:80/")
+        // .domain("//js.jloads.com/")
+        .env("//localhost:80/", "local",function () {
+            return window.location.hostname === 'localhost';
+        })
+        .env("//js.jloads.com/", "production",function () {
+            return window.location.hostname !== 'localhost';
+        })
         .js([
-            "message.js",
-            "e.js",
-            "formToObject.min.js",
-            "response.js",
+            "load/message.js",
+            "load/e.js",
+            "load/formToObject.min.js",
+            "load/response.js",
             "rest/rest.js",
+
             "include/include.js",
-            "listener.js",
-            "router.js",
-            // "jloads.js",
+
+            "load/listener.js",
+            "load/router.js",
             "rest/rest-form.js"
         ]);
 
-    loader
+    var external = new Load(document.body, success, error);
+
+    external
         .cacheOff()
         .domain("//app.jloads.com/visitor/home/js/")
         .js([
             "form.js"
         ]);
 
-    loader.style([
+    external.style([
         "//app.jloads.com/visitor/newsletter/css/black.css",
         "//app.jloads.com/visitor/home/css/mobile.css"
     ]);
 
-    loader.delay(10).target("#home-plugins").html([
+    external.delay(10).target("#home-plugins").html([
         "//app.jloads.com/visitor/home/plugin/messages.html",
         "//app.jloads.com/visitor/newsletter/plugin/create.html"
     ]);
 
 
-    loader.delay(70).target("#home-plugins").image([
+    external.delay(70).target("#home-plugins").image([
         "//app.jloads.com/visitor/home/img/apiunit.png"
     ]);
 
@@ -100,7 +110,7 @@
     //     load(target, success, error)
     // );
     //
-    // loader.delay(100).cache(1).js([
+    // jloads.delay(100).cache(1).js([
     //     "//js.jloads.com/index.js",
     //     "//js.jloads.com/index1.js"
     // ]);
