@@ -1,10 +1,14 @@
 setTimeout(function () {
-        var response = function (a,b,c) {
-            console.log("a", a);
-            console.log("b", b);
-            console.log("c", c);
+        var response = function (xhr,b,c) {
+            console.log("xhr", xhr);
+            // console.log("b", b);
+            // console.log("c", c);
             // alert("OK RESPONSE");
+            AddMessage(xhr.status);
+            AddMessage(xhr.statusText);
+            AddMessage(xhr.response);
         }
+
 
         var form = new RestForm('form', response, error, success);
 
