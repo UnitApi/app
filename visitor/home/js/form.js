@@ -3,7 +3,7 @@ setTimeout(function () {
             console.log("a", a);
             console.log("b", b);
             console.log("c", c);
-            alert("OK RESPONSE");
+            // alert("OK RESPONSE");
         }
 
         var form = new RestForm('form', response, error, success);
