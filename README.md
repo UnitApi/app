@@ -5,6 +5,7 @@ Frontend app,
 using js.jloads.com, small html modules, possible to use in external projects
 
 [app.jloads.com/visitor/newsletter/page/index.html](https://app.jloads.com/visitor/newsletter/page/index.html)
+![browser](docs/browser.png)
 
 ## How it works?
 
@@ -13,7 +14,7 @@ using js.jloads.com, small html modules, possible to use in external projects
 
 ![body](docs/body.png)
 
-![browser](docs/browser.png)
+
 
 
 ## localhost url's
