@@ -4,6 +4,8 @@ It's just an example...
 Frontend app, 
 using js.jloads.com, small html modules, possible to use in external projects
 
+[app.jloads.com/visitor/newsletter/page/index.html](https://app.jloads.com/visitor/newsletter/page/index.html)
+
 ## How it works?
 
 
