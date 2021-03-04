@@ -3,6 +3,14 @@ frontend app, using js.jloads.com, small html modules, possible to use in extern
 
 ## ladowane bezposrednio z github
 
+How to works:
+
+![browser](docs/browser.png)
+
+![head](docs/head.png)
+
+![body](docs/body.png)
+
 
 ## localhost url's
 
