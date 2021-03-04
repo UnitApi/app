@@ -1,9 +1,10 @@
-# app
-frontend app, using js.jloads.com, small html modules, possible to use in external projects
+# Form based on js.jloads.com - oldest version from 2020
+It's just an example...
 
-## ladowane bezposrednio z github
+Frontend app, 
+using js.jloads.com, small html modules, possible to use in external projects
 
-### How it works?
+## How it works?
 
 
 ![head](docs/head.png)
@@ -26,8 +27,3 @@ frontend app, using js.jloads.com, small html modules, possible to use in extern
 [Home](http://localhost:3000/visitor/home/page/index.html)
 
 [Newsletter](http://localhost:3000/visitor/newsletter/page/index.html)
-
-
-### bylo cname
-sharp-clarke-5c1969.netlify.com
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7da6a43c-4ace-4873-acd2-6e0cef7e3f60/deploy-status)](https://app.netlify.com/sites/jloads/deploys)
